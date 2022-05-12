@@ -1,0 +1,20 @@
+[ 
+	{
+		"title": "Escuadra",
+		"price": 123.45,
+		"thumbnail": "https://sites.google.com/site/planimetriafcyt/_/rsrc/1426009125136/elementos-de-dibujo/escuadras/escuadras2.png",
+		"id": 1
+	},
+	{
+		"title": "Calculadora",
+		"price": 234.56,
+		"thumbnail": "https://pardohogar.vteximg.com.br/arquivos/ids/159598-1280-852/CLACU-01.jpg?v=636863572585170000",
+		"id": 2
+	},
+	{
+		"title": "Globo Terraqueo",
+		"price": 345.67,
+		"thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxcgNfOvpL8xlBWwD0HVORx7LSyFJcCtYGQ&usqp=CAU",
+		"id": 3
+	}
+]
