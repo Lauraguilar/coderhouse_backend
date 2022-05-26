@@ -1,0 +1,2 @@
+De los 3 motores utilizados el que mas me gusto fue EJS porque no hay que aprenderse ninguna sixtaxis extra y me parece muy poderoso al admitir JS
+el 2do que mas me gusto fue handlebars, porque me parecio mas intuitivo y que pugs

@@ -1,0 +1,7 @@
+section(class="container")
+    h1(class="display-3 d-flex justify-content-center")= 'Desafio 11 - Pug'
+    ul(class="nav") 
+        - const nav = [{"titulo":"Vista de Productos", url: "/api/productos/vista"}, {"titulo": "Carga de Productos", url: "/api/productos/vista/cargar"}]    
+        each item in nav 
+            li(class="nav-item")
+                a(class="nav-link" href=item.url)= item.titulo

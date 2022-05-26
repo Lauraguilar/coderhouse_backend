@@ -1,0 +1,23 @@
+<h1 class="display-6">Ingrese Producto:</h1>
+<form action="/api/productos/" method="post" style="height: 500px; width: 500px">
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Title</span>
+        <input name="title" type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input name="price" type="text" class="form-control" placeholder="Price" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">999.99</span>
+    </div>
+
+    <label for="basic-url" class="form-label">Thumbnail</label>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon3">https://example.com/</span>
+        <input name="thumbnail" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <input type="hidden" name="form" value="1">
+    <button type="submit" class="btn btn-primary">Agregar</button>  
+</form> 

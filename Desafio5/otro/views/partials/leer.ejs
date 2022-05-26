@@ -1,0 +1,26 @@
+<h1 class="display-6">Vista de Productos</h1>
+<% if (productos) { %>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productos.forEach(producto => {%>
+                <tr>
+                    <th scope="row"><%= producto.title %></th>
+                    <th><%= producto.price %></th> 
+                    <th><img src= <%= producto.thumbnail %> alt= <%= producto.title %> style="height: 100px; width: 100px" class="img-thumbnail"></th>
+                </tr>
+                <%});%>
+        </tbody>
+    </table>
+    <%} else {%>
+        <p class="alert alert-warning">No hay productos!</p>
+        <%}%>
+    
+
+
