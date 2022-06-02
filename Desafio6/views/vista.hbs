@@ -1,0 +1,21 @@
+{{> carga}}
+<hr class="my-4">
+<div id="lista">
+    <!-- plublic/plantillas/lista.hbs-->
+</div>
+<hr class="my-4">
+<div>
+    <h1 class="display-6">Centro de Mensajes</h1>
+    <div id="messages"></div>
+    <form onsubmit="return addMessages(this)" autocomplete="off" style="width: 600px;">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="email"  id="username" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Mensaje</span>
+            <textarea class="form-control" id="texto" aria-label="With textarea"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Enviar!</button> 
+    </form>
+</div>

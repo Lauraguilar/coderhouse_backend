@@ -1,0 +1,24 @@
+<!---Vista Producto---->
+<h1 class="display-6">Vista de Productos</h1>
+{{#if (isFalse productos)}}
+    <p class="alert alert-warning">No hay productos!</p>
+{{else}}
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+               </tr>
+        </thead>
+        <tbody>
+            {{#each productos}}
+                <tr>
+                    <th scope="row">{{this.title}}</th>
+                    <th>{{this.price}}</th> 
+                    <th><img src={{this.thumbnail}} alt={{this.title}} style="height: 100px; width: 100px" class="img-thumbnail"></th>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{/if}}
