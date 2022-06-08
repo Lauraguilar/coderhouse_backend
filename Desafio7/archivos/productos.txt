@@ -1,0 +1,33 @@
+[][
+	{
+		"id": 1,
+		"timestamp": 1622176657184,
+		"nombre": "Escuadra",
+		"descripcion": "una descripcion",
+		"codigo": "un codigo",
+		"foto": "https://sites.google.com/site/planimetriafcyt/_/rsrc/1426009125136/elementos-de-dibujo/escuadras/escuadras2.png",
+		"price": 123.45,
+		"stock": 200
+	}
+][
+	{
+		"id": 1,
+		"timestamp": 1622176657184,
+		"nombre": "Escuadra",
+		"descripcion": "una descripcion",
+		"codigo": "un codigo",
+		"foto": "https://sites.google.com/site/planimetriafcyt/_/rsrc/1426009125136/elementos-de-dibujo/escuadras/escuadras2.png",
+		"price": 123.45,
+		"stock": 200
+	},
+	{
+		"id": 2,
+		"timestamp": 1622176681020,
+		"nombre": "Calculadora",
+		"descripcion": "otra descripcion",
+		"codigo": "otro codigo",
+		"foto": "https://pardohogar.vteximg.com.br/arquivos/ids/159598-1280-852/CLACU-01.jpg?v=636863572585170000",
+		"price": 234.56,
+		"stock": 250
+	}
+]

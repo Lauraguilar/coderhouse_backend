@@ -1,0 +1,15 @@
+[
+	{
+		"id": 1,
+		"timestamp": 1622176881184,
+		"producto": {
+			"nombre": "Escuadra",
+			"price": 123.45,
+			"foto": "https://sites.google.com/site/planimetriafcyt/_/rsrc/1426009125136/elementos-de-dibujo/escuadras/escuadras2.png",
+			"descripcion": "una descripcion",
+			"codigo": "un codigo",
+			"stock": 200,
+			"id": 5
+		}
+	}
+]
