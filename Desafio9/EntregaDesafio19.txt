@@ -1,0 +1,135 @@
+// Creo Base Ecommerce
+use ecommerce
+
+// Creo colecciones mensajes y productos
+db.createCollection("mensajes")
+db.createCollection("productos")
+
+// Inserto 10 documentos en mensajes
+db.mensajes.insertMany([
+	{
+		usuario: "prueba1@email.com", 
+		mensaje: "msj de prueba 1"
+	},
+	{
+		usuario: "prueba2@email.com", 
+		mensaje: "msj de prueba 2"
+	},
+	{
+		usuario: "prueba3@email.com", 
+		mensaje: "msj de prueba 3"
+	},
+	{
+		usuario: "prueba4@email.com", 
+		mensaje: "msj de prueba 4"
+	},
+	{
+		usuario: "prueba5@email.com", 
+		mensaje: "msj de prueba 5"
+	},
+	{
+		usuario: "prueba6@email.com", 
+		mensaje: "msj de prueba 6"
+	},
+	{
+		usuario: "prueba7@email.com", 
+		mensaje: "msj de prueba 7"
+	},
+	{
+		usuario: "prueba8@email.com", 
+		mensaje: "msj de prueba 8"
+	},
+	{
+		usuario: "prueba9@email.com", 
+		mensaje: "msj de prueba 9"
+	},
+	{
+		usuario: "prueba10@email.com", 
+		mensaje: "msj de prueba 10"
+		}
+])
+
+// Inserto 10 documentos en productos
+db.productos.insertMany([
+	{
+		nombre: "producto1",
+		precio: 120
+	},
+	{
+		nombre: "producto2",
+		precio: 580}
+	,
+	{
+		nombre: "producto3",
+		precio: 900
+	},
+	{
+		nombre: "producto4",
+		precio: 1280
+	},
+	{
+		nombre: "producto5"
+		, precio: 1700
+	},
+	{
+		nombre: "producto6",
+		precio: 1280
+	},
+	{
+		nombre: "producto7",
+		precio: 1700
+	},
+	{
+		nombre: "producto8",
+		precio: 2300
+	},
+	{
+		nombre: "producto9", 
+		precio: 2860
+	},
+	{
+		nombre: "producto10",
+		precio: 3350
+	}
+])
+
+// Muestro los documentos en cada coleccion 
+db.mensajes.find()
+db.productos.find()
+
+// muestro la cantidad de documentos que tiene cada coleccion 
+db.productos.count()
+db.mensajes.count()
+
+// inserto un producto mas en la coleccion de productos
+db.productos.insertOne({nombre: "producto 11", precio: 4320})
+
+// --- Busquedas --- //
+// precio menor a mil
+db.productos.find({"precio": {$lt: 1000}})
+
+//entre mil y tres mil
+db.productos.find({
+	$and: [
+		{"precio": {$gte: 1000}},
+		{"precio": {$lte: 3000}}
+	]
+})
+
+//mayores a tres mil
+db.productos.find({"precio": {$gt: 3000}})
+
+//tercer producto mas barato
+db.productos.find({}, {"nombre": 1, "_id": 0}).sort({"precio": 1}).skip(2).limit(1)
+
+// agregar campo stock con cien unidades
+db.productos.updateMany({}, {$set: {"stock": 100}})
+
+//actualizar stock a cero precios mayores a 4000
+db.productos.updateMany({"precio": {$gt: 4000}}, {$set: {"stock": 0}})
+
+// borrar los menores a mil 
+db.productos.remove({"precio": {$lt: 1000}})
+
+// Crear usuario con clave de lectura
+db.createUser({user: "pepe", pwd: "asd456", roles: [{role:"read", db:"ecommerce"}]})
